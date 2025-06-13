@@ -23,7 +23,7 @@ git clone https://github.com/Fergus-Gault/poolpal.git
 cd poolpal
 ```
 
-Create a virtual environment with Python 3.12
+Create a virtual environment with Python 3.12. (You may need to run `source activate base` before activating `poolpal`)
 
 ```bash
 conda create -y -n poolpal python=3.12
@@ -35,6 +35,8 @@ Download requirements
 ```bash
 pip install -r requirements.txt
 ```
+
+You will require 2 terminals within the `poolpal` environment.
 
 ## Usage
 
@@ -118,6 +120,9 @@ You do not need to do anything when connected.
 
 - Hitting mechanism moves forward but does not release.
     - The brown wire on the Raspberry Pi is disconnected, ensure it is in **GPIO 12**.
+
+- Hitting mechanism is struggling to move upwards after making a shot.
+    - The batteries are low, replace them.
 
 - Table is misaligned in the computer vision
     - Reset the table points by deleting `computer_vision/src/data/table_pts.json` and restarting the program.

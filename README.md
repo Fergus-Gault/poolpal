@@ -30,7 +30,7 @@ conda create -y -n poolpal python=3.12
 conda activate poolpal
 ```
 
-Download requirements
+Download requirements (may take a while).
 
 ```bash
 pip install -r requirements.txt
@@ -53,7 +53,7 @@ To successfully run Poolpal you must have installed/have access to:
 ### **Step 1 - Connection**
 
 - Connect both USB cables to your computer (black and white ones)
-- Connect the loose wires to a 12V power supply (**Yellow wire in +, brown in -**)
+- Connect the loose wires to a 12V power supply (**Brown wire in +, yellow in -**)
 
 ### **Step 2 - Computer Vision**
 
@@ -61,7 +61,7 @@ To successfully run Poolpal you must have installed/have access to:
 - Run computer vision:
 
 ```bash
-python computer_vision/main.py --camera_port [port] --no-interface
+python computer_vision/main.py --camera-port [port] --no-interface
 ```
 
 - `--no-interface` - Disables the [LiveConfig](https://github.com/Fergus-Gault/liveconfig) interface as this project comes pre-configured. Exclude this argument if you wish to modify variables.

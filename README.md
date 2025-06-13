@@ -1,9 +1,11 @@
 # **PoolPal**
 
 ## About
-PoolPal was a project created during the University of Edinburgh's System Design Project course. Developed over a roughly 10 week period, PoolPal is designed to allow for remote play on a real pool table.
+
+PoolPal is a project created during the University of Edinburgh's System Design Project course. Developed over a roughly 10 week period, PoolPal is designed to allow for remote play on a real pool table.
 
 ## Members
+
 - Josh Newham - _Project manager, app team_
 - Hugo Arbones - _Gantry, electronics_
 - Oliver Hill - _Gantry, hitting mechanism_
@@ -12,22 +14,24 @@ PoolPal was a project created during the University of Edinburgh's System Design
 - David Zhang Chen - _Table, app team_
 - Matthew Zhang - _App team_
 
-
 ## Installation
 
 Clone the repository
+
 ```bash
 git clone https://github.com/Fergus-Gault/poolpal.git
 cd poolpal
 ```
 
 Create a virtual environment with Python 3.12
+
 ```bash
 conda create -y -n poolpal python=3.12
 conda activate poolpal
 ```
 
 Download requirements
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -79,7 +83,7 @@ python motor_controller/gantry_controller.py
 
 ### **Step 4 - Hitting mechanism**
 
-Now you can finally setup the hitting mechanism **It is important these steps are done in order**.
+Now you can finally setup the hitting mechanism. **It is important these steps are done in order**.
 
 1. Set up a mobile hotspot
     - Name: `poolpal`

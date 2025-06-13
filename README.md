@@ -7,8 +7,8 @@ PoolPal is a project created during the University of Edinburgh's System Design 
 ## Members
 
 - Josh Newham - _Project manager, app team_
-- Hugo Arbones - _Gantry, electronics_
-- Oliver Hill - _Gantry, hitting mechanism_
+- Hugo Arbones - _Gantry, electronics, motor_control code_
+- Oliver Hill - _Gantry, electronics, hitting mechanism_
 - Gabriel MacCallum - _Hitting mechanism_
 - Fergus Gault - _Computer vision_
 - David Zhang Chen - _Table, app team_

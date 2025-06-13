@@ -16,6 +16,8 @@ PoolPal is a project created during the University of Edinburgh's System Design 
 
 ## Installation
 
+Please note: **The installation and usage process could take at least 30 minutes for someone unfamiliar with the project.**
+
 Clone the repository
 
 ```bash

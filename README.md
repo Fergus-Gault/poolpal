@@ -69,7 +69,7 @@ python computer_vision/main.py --camera-port [port] --no-interface
 ### **Step 3 - Gantry**
 
 - Launch the Arduino IDE and ensure that you are connected to the arduino.
-- Open `motor_controller/gantry_controller.py` and modify line 19:
+- Open `motor_control/gantry_controller.py` and modify line 19:
 
 ```python
 ser = serial.Serial([port], 115200)
@@ -80,7 +80,7 @@ where [port] is the port seen in the Arduino IDE
 - Run the gantry motor_controller
 
 ```bash
-python motor_controller/gantry_controller.py
+python motor_control/gantry_controller.py
 ```
 
 ### **Step 4 - Hitting mechanism**

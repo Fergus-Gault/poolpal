@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 POOLPAL_URL = "http://poolpal.joshn.uk"
 
-WRITE_STATS = True
+WRITE_STATS = False
 
 moving = False
 

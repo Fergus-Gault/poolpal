@@ -229,7 +229,7 @@ class DetectionModel:
                 config.font_color,
                 config.font_thickness)
 
-        cv2.imshow("Detection", frame)
+        return frame
 
     def extract_bounding_boxes(self, frame, results):
         bounding_boxes = []
@@ -257,10 +257,9 @@ class DetectionModel:
             detections, labels = self.detect(frame)
             if config.draw_results and not config.hide_windows:
                 self.destroy_camera_frame_window()
-                drawing_frame = frame.copy()
-                self.draw(drawing_frame, detections)
+                drawing_frame = self.draw(frame, detections)
                 cv2.imshow("Detection", drawing_frame)
-            elif not config.hide_windows:
+            elif not config.hide_windows and not config.draw_results:
                 self.destroy_detection_drawing_window()
                 cv2.imshow("Camera Frame", frame)
             elif config.hide_windows:

@@ -32,7 +32,7 @@ class Config:
         self.gantry_effective_range_y_px = (84, 516)
         self.use_hidden_balls = False
         self.use_model = True
-        self.process_every_n_frames = 2
+        self.process_every_n_frames = 1
         self.detection_model_path = "./computer_vision/model/detection_model.pt"
         self.position_threshold = 6
         self.hole_threshold = 30
@@ -43,6 +43,6 @@ class Config:
         self.use_table_pts = True
         self.model_image_path = "./computer_vision/src/data/model/training_images/"
         self.collect_model_images = False
-        self.calibration_params_path = "./computer_vision/src/data/calibration_params.json"
+        self.calibration_params_path = "./computer_vision/src/data/camera_calibration.json"
         self.calibration_images_path = "./computer_vision/src/data/calibration_images/wide_angle_cam/"
         self.table_pts_path = "./computer_vision/src/data/table_pts.json"

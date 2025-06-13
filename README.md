@@ -69,7 +69,7 @@ python computer_vision/main.py --camera_port [port] --no-interface
 ### **Step 3 - Gantry**
 
 - Launch the Arduino IDE and ensure that you are connected to the arduino.
-- Open `motor_controller/gantry_controller.py` and modify line 19: 
+- Open `motor_controller/gantry_controller.py` and modify line 19:
 
 ```python
 ser = serial.Serial([port], 115200)
@@ -91,7 +91,7 @@ Now you can finally setup the hitting mechanism. **It is important these steps a
     - Name: `poolpal`
     - Password: `poolpal1`
     - Network band: `2.4 GHz` (If applicable)
-    - If using a phone then you must rename your phone to `poolpal` and also connect your laptop to that mobile hotspot.
+    - If using a phone then you may need to rename your phone to `poolpal` and must also connect your computer to that mobile hotspot.
     - This is significantly easier using a Windows laptop and sharing your connection from WIFI over WIFI.
     ![Hotspot configuration on Windows](./media/hotspot_config.png "Hotspot config on windows")
 
@@ -109,33 +109,39 @@ Now you can finally setup the hitting mechanism. **It is important these steps a
 ssh poolpal@poolpal
 ```
 
-with password: `poolpal`
+with password: `poolpal`.
 You do not need to do anything when connected.
 
 ### **Step 5 - Play**
 
-- Go to http://poolpal.joshn.uk/app/index.html to play using the web interface!
+- Go to the [PoolPal app](http://poolpal.joshn.uk/app/index.html) to play using the web interface!
 
-### **Common issues**
+## **Common issues**
 
-- Hitting mechanism moves forward but does not release.
-    - The brown wire on the Raspberry Pi is disconnected, ensure it is in **GPIO 12**.
+### Hitting mechanism moves forward but does not release
 
-- Hitting mechanism is struggling to move upwards after making a shot.
-    - The batteries are low, replace them.
+- The brown wire on the Raspberry Pi is disconnected, ensure it is in **GPIO 12**.
 
-- Table is misaligned in the computer vision
-    - Reset the table points by deleting `computer_vision/src/data/table_pts.json` and restarting the program.
-    - This will prompt you to manually reselect the corners of the table.
-    - Select 4 points so that only the playing surface of the table is within the rectangle that is created when all 4 points are selected.
-    - ![Ideal points for corner selection](./media/ideal_points.jpg "Ideal Points")
+### Hitting mechanism is struggling to move upwards after making a shot
 
-- Gantry is not moving
-    - Double check the emergency button is not pressed, as this stops all power from reaching the stepper motors.
-    - Ensure no loose wires within the wiring box.
+- The batteries are low, replace them.
 
-- I accidently reset the Arduino!
-    - Flash `motor_control/main/main.ino` to the Arduino.
+### Table is misaligned in the computer vision
 
-- The Raspberry Pi has not connected to the hostpot.
-    - As with nearly all things related to the Raspberry Pi not working, the best idea is to take of the yellow side panel, and disconnect the power from the Raspberry Pi. Wait a few seconds and then repeat step 3 onwards.
+- Reset the table points by deleting `computer_vision/src/data/table_pts.json` and restarting the program.
+- This will prompt you to manually reselect the corners of the table.
+- Select 4 points so that only the playing surface of the table is within the rectangle that is created when all 4 points are selected.
+    ![Ideal points for corner selection](./media/ideal_points.jpg "Ideal Points")
+
+### Gantry is not moving
+
+- Double check the emergency button is not pressed, as this stops all power from reaching the stepper motors.
+- Ensure no loose wires within the wiring box.
+
+### Arduino was reset
+
+- Flash `motor_control/main/main.ino` to the Arduino.
+
+### The Raspberry Pi has not connected to the hostpot
+
+- As with nearly all things related to the Raspberry Pi not working, the best idea is to take of the yellow side panel, and disconnect the power from the Raspberry Pi. Wait a few seconds and then repeat step 3 of the hitting mechanism setup onwards.

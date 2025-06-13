@@ -36,7 +36,7 @@ Download requirements (may take a while).
 pip install -r requirements.txt
 ```
 
-You will require 2 terminals within the `poolpal` environment.
+You will require 2 terminals within the `poolpal` environment and a 3rd for ssh.
 
 ## Usage
 
@@ -96,7 +96,7 @@ Now you can finally setup the hitting mechanism. **It is important these steps a
     ![Hotspot configuration on Windows](./media/hotspot_config.png "Hotspot config on windows")
 
 2. Take yellow side panel of enclosure off.
-3. Check Raspberry Pi wires are correctly attached, and that there are no other loose wires.
+3. Check Raspberry Pi wires are correctly attached, and that there are no other loose wires. The single brown wire is prone to coming out of place. It should be in **GPIO 12** (see below).
 ![Wire configuration for RPi](./media/rp3-gpio.jpg "Raspberry Pi GPIO layout")
 
 4. Connect the power bank to the USB cable and place it on top of the motor in the black half of the enclosure. Ensure this does not interfere with the hitting mechanism itself, you may need to use bluetack to prop it up enough.

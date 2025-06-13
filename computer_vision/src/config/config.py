@@ -43,6 +43,6 @@ class Config:
         self.use_table_pts = True
         self.model_image_path = "./computer_vision/src/data/model/training_images/"
         self.collect_model_images = False
-        self.calibration_params_path = "./computer_vision/src/data/calibration_params.json"
+        self.calibration_params_path = "./computer_vision/src/data/camera_calibration.json"
         self.calibration_images_path = "./computer_vision/src/data/calibration_images/wide_angle_cam/"
         self.table_pts_path = "./computer_vision/src/data/table_pts.json"
